@@ -1,0 +1,534 @@
+
+:root {
+    --cor-principal: #C0392B; 
+    --cor-secundaria: #27AE60; 
+    --cor-fundo: #F4F4F4;
+    --cor-texto: #333;
+    --cor-clara: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header {
+    background: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px #020000;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav h1 {
+    font-size: 1.5em;
+    color: var(--cor-clara);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--cor-clara);
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: var(--cor-clara);
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.menu-responsivel {
+    background-color: var(--cor-principal);
+    width: 100%;
+    padding: 15px 0; 
+    margin: 0;
+}
+
+
+nav {
+    width: 100%;
+    margin: 0 auto; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+    white-space: nowrap; 
+    padding-bottom: 10px; 
+}
+
+
+li {
+    list-style: none;
+    display: inline-block;
+    
+    a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 16px;
+        position: relative;
+        color: var(--cor-clara); 
+        border-radius: 0; 
+        text-align: center;
+        transition-duration: 0.25s;
+        
+        &:hover{
+            color: #020000;
+        }
+    }
+    
+   
+    &:nth-child(1) a { background-color: #8d1104; }
+    &:nth-child(2) a { background-color: #039941; }
+    &:nth-child(3) a { background-color: #ebc315; }
+    &:nth-child(4) a { background-color: #8d1104; }
+    &:nth-child(5) a { background-color: #039941; }
+    &:nth-child(6) a { background-color: #ebc315; } 
+    
+    &.active a{
+        color: var(--cor-clara);
+        font-weight: bold;
+    }
+
+
+    &:first-child a {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    &:last-child a {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+}
+
+
+.dot {
+    background-color: var(--cor-fundo); 
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+}
+
+
+.introducao {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--cor-texto);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.introducao h2 {
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.introducao p {
+    font-size: 1.1em;
+}
+
+
+.cards-principais h3 {
+    text-align: center;
+    margin: 30px 0 20px;
+    color: var(--cor-texto);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--cor-clara);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px #020000;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 45%; 
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px #020000
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h4 {
+    color: var(--cor-principal);
+    margin: 15px 0 5px;
+    font-size: 1.2em;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 0.9em;
+    color: var(--cor-texto);
+}
+
+
+.conteudos-relacionados {
+    background: var(--cor-clara);
+    padding: 20px;
+    border-left: 5px solid var(--cor-secundaria);
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 30px;
+}
+
+.conteudos-relacionados h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.conteudos-relacionados li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #DDD;
+}
+
+.conteudos-relacionados li:last-child {
+    border-bottom: none;
+}
+
+.conteudos-relacionados a {
+    color: var(--cor-texto);
+    display: block;
+    transition: color 0.3s;
+}
+
+.conteudos-relacionados a:hover {
+    color: var(--cor-principal);
+    padding-left: 5px;
+}
+
+
+.rodape-padrao {
+    background: var(--cor-texto);
+    color: #AAA;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.rodape-padrao a {
+    color: var(--cor-secundaria);
+}
+
+.rodape-padrao a:hover {
+    color: var(--cor-clara);
+}
+
+
+.secao-organizacao article {
+    background-color: var(--cor-clara);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-secundaria); 
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px #020000;
+    display: flex;
+    align-items: center;
+}
+
+.secao-organizacao article h3 {
+    color: var(--cor-principal);
+    width: 100%; 
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.secao-organizacao article p,
+.secao-organizacao article ul {
+    flex: 2; 
+    padding-right: 40px;
+    margin-bottom: 50px;
+}
+
+.secao-organizacao article ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+.secao-organizacao article img {
+    flex: 1; 
+    max-width: 600px; 
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+.secao-cards-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.card-categoria {
+    flex: 1 1 300px; 
+    background-color: var(--cor-clara);
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px #020000;
+    transition: transform 0.3s;
+}
+
+.card-categoria:hover {
+    transform: translateY(-3px);
+}
+
+.card-categoria img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.card-categoria h3 {
+    color: var(--cor-principal);
+    padding: 15px 15px 5px;
+}
+
+.card-categoria p {
+    padding:  15px 15px 15px;
+    font-size: 0.95em;
+}
+
+.card-categoria a {
+    display: block;
+    text-align: center;
+    padding: 6px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    
+}
+
+.card-categoria a:hover {
+    background-color: #fdd835;
+}
+
+.personagens-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.personagens-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.personagens-page .introducao {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+
+.cards-grid {
+    display: grid;
+   
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+
+.personagem-card {
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--cor-texto);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.personagem-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px var(--cor-texto);
+}
+
+.personagem-card img {
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.personagem-card h2 {
+    font-size: 1.5em;
+    color: var(--cor-principal); 
+    margin-bottom: 10px;
+}
+
+.personagem-card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.pagina-videos {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pagina-videos h1 {
+    margin-bottom: 10px;
+}
+
+.pagina-videos .introducao {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    text-align: left;
+}
+
+
+.video-card {
+    background-color: var(--cor-clara);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #020000;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.video-card:hover {
+    box-shadow: 0 8px 15px #020000;
+}
+
+.video-card a {
+    text-decoration: none;
+    color: inherit; 
+    display: block;
+}
+
+
+.capa {
+    position: relative;
+    width: 100%;
+   
+    padding-top: 56.25%; 
+    overflow: hidden;
+}
+
+.capa img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05); 
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: var(--cor-clara);
+    background-color: #020000;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 65px; 
+    text-align: center;
+    pointer-events: none; 
+}
+
+
+.video-card h3 {
+    font-size: 1.2em;
+    padding: 15px 15px 5px 15px;
+    color: var(--cor-principal); 
+}
+
+.video-card p {
+    font-size: 0.9em;
+    color: #555;
+    padding: 0 15px 15px 15px;
+}
+
+
